@@ -3,95 +3,122 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KINETIC | Filmes & Séries</title>
+  <title>KINETIC - Streaming</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Oswald:wght@500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navbar Minimalista -->
+  <!-- Navegação -->
   <header id="navbar">
-    <div class="logo">KINETIC</div>
+    <div class="logo">KINETIC<span>.</span></div>
     <nav class="nav-links">
-      <a href="#">Lançamentos</a>
+      <a href="#" class="active">Início</a>
       <a href="#">Séries</a>
       <a href="#">Filmes</a>
-      <a href="#">K-Originals</a>
+      <a href="#">Catálogo</a>
     </nav>
-    <div class="nav-icons">
-      <button class="icon-btn">🔍</button>
-      <button class="icon-btn">👤</button>
+    <div class="nav-actions">
+      <span class="icon">🔍</span>
+      <span class="icon">👤</span>
     </div>
   </header>
 
-  <!-- Hero Banner - Imagem de Impacto -->
   <main>
-    <section class="hero">
-      <div class="hero-overlay"></div>
+    <!-- Capa Principal (Hero Section) -->
+    <section class="hero" id="hero-section">
+      <div class="overlay"></div>
+      
       <div class="hero-content">
-        <span class="badge">Série Original</span>
-        <h1 class="hero-title">A QUEDA<br>DO IMPÉRIO</h1>
-        <p class="hero-subtitle">Não apenas assista. Sinta. A nova temporada já está disponível.</p>
-        <div class="hero-actions">
-          <button class="btn btn-primary">ASSISTIR AGORA</button>
-          <button class="btn btn-secondary">VER TRAILER</button>
+        <span class="badge" id="hero-badge">EXCLUSIVO</span>
+        <h1 class="hero-title" id="hero-title">O ABISMO</h1>
+        <p class="hero-desc" id="hero-desc">
+          A escuridão esconde os maiores segredos. Prepare-se para a série de suspense mais aguardada do ano. Quando a luz falha, a verdadeira caçada começa.
+        </p>
+        
+        <div class="cta-group">
+          <button class="btn-primary">ASSISTIR AGORA</button>
+          <button class="btn-secondary">+ MINHA LISTA</button>
+        </div>
+      </div>
+
+      <div class="trending-section">
+        <h3 class="trending-title">EM ALTA</h3>
+        <div class="thumbnail-row" id="thumbnail-row">
+          <!-- Renderizado via JS -->
         </div>
       </div>
     </section>
 
-    <!-- Seção de Carrossel (Estilo vitrine de produtos) -->
-    <section class="trending-section">
-      <div class="section-header">
-        <h2 class="section-title">EM DESTAQUE</h2>
-        <div class="carousel-controls">
-          <button id="scroll-left" class="arrow-btn">←</button>
-          <button id="scroll-right" class="arrow-btn">→</button>
-        </div>
-      </div>
+    <!-- Catálogo de Conteúdo -->
+    <section class="catalog">
       
-      <div class="carousel" id="carousel">
-        <!-- Card 1 -->
-        <div class="card">
-          <div class="card-img-box">
-            <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=600&auto=format&fit=crop" alt="Pôster do Filme">
+      <!-- Trilha 1 -->
+      <div class="catalog-row">
+        <h2 class="row-title">KINETIC ORIGINALS</h2>
+        <div class="slider-container">
+          <button class="scroll-btn left">‹</button>
+          <div class="slider" id="slider-1">
+            <!-- Cards -->
+            <div class="movie-card" style="background-image: url('https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=600&auto=format&fit=crop');">
+              <div class="card-info"><h4>CYBER CITY</h4></div>
+            </div>
+            <div class="movie-card" style="background-image: url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=600&auto=format&fit=crop');">
+              <div class="card-info"><h4>O SILÊNCIO</h4></div>
+            </div>
+            <div class="movie-card" style="background-image: url('https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?q=80&w=600&auto=format&fit=crop');">
+              <div class="card-info"><h4>ANOMALIA</h4></div>
+            </div>
+            <div class="movie-card" style="background-image: url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=600&auto=format&fit=crop');">
+              <div class="card-info"><h4>ECLIPSE FINAL</h4></div>
+            </div>
+            <div class="movie-card" style="background-image: url('https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=600&auto=format&fit=crop');">
+              <div class="card-info"><h4>ROTA DE FUGA</h4></div>
+            </div>
+            <div class="movie-card" style="background-image: url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=600&auto=format&fit=crop');">
+              <div class="card-info"><h4>NÉON</h4></div>
+            </div>
           </div>
-          <div class="card-info">
-            <h3>CYBERPUNK CITY</h3>
-            <p>Ficção Científica</p>
-          </div>
-        </div>
-        <!-- Card 2 -->
-        <div class="card">
-          <div class="card-img-box">
-            <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=600&auto=format&fit=crop" alt="Pôster do Filme">
-          </div>
-          <div class="card-info">
-            <h3>O SILÊNCIO</h3>
-            <p>Suspense / Terror</p>
-          </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="card">
-          <div class="card-img-box">
-            <img src="https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?q=80&w=600&auto=format&fit=crop" alt="Pôster do Filme">
-          </div>
-          <div class="card-info">
-            <h3>ANOMALIA</h3>
-            <p>Drama</p>
-          </div>
-        </div>
-        <!-- Card 4 -->
-        <div class="card">
-          <div class="card-img-box">
-            <img src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=600&auto=format&fit=crop" alt="Pôster do Filme">
-          </div>
-          <div class="card-info">
-            <h3>ECLIPSE FINAL</h3>
-            <p>Ação</p>
-          </div>
+          <button class="scroll-btn right">›</button>
         </div>
       </div>
+
+      <!-- Trilha 2 -->
+      <div class="catalog-row">
+        <h2 class="row-title">ADRENALINA PURA</h2>
+        <div class="slider-container">
+          <button class="scroll-btn left">‹</button>
+          <div class="slider" id="slider-2">
+            <div class="movie-card" style="background-image: url('https://images.unsplash.com/photo-1594909122845-11baa439b7bf?q=80&w=600&auto=format&fit=crop');">
+              <div class="card-info"><h4>ZONA DE RISCO</h4></div>
+            </div>
+            <div class="movie-card" style="background-image: url('https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=600&auto=format&fit=crop');">
+              <div class="card-info"><h4>FRONTEIRA</h4></div>
+            </div>
+            <div class="movie-card" style="background-image: url('https://images.unsplash.com/photo-1508247072522-83b5444155a0?q=80&w=600&auto=format&fit=crop');">
+              <div class="card-info"><h4>IMPACTO</h4></div>
+            </div>
+            <div class="movie-card" style="background-image: url('https://images.unsplash.com/photo-1544078751-58fee2d8a03b?q=80&w=600&auto=format&fit=crop');">
+              <div class="card-info"><h4>O RESGATE</h4></div>
+            </div>
+            <div class="movie-card" style="background-image: url('https://images.unsplash.com/photo-1627856013091-fed6e4e04751?q=80&w=600&auto=format&fit=crop');">
+              <div class="card-info"><h4>OPERAÇÃO X</h4></div>
+            </div>
+          </div>
+          <button class="scroll-btn right">›</button>
+        </div>
+      </div>
+
     </section>
   </main>
+
+  <!-- Rodapé Minimalista -->
+  <footer>
+    <h2>KINETIC<span>.</span></h2>
+    <p>NÃO APENAS ASSISTA. SINTA.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
